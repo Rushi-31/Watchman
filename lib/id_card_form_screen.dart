@@ -73,7 +73,7 @@ class _IdCardFormScreenState extends State<IdCardFormScreen> {
         }
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Storage permission denied.')),
+          const SnackBar(content: Text('Storage permission denied.')),
         );
       }
     } catch (e) {
@@ -118,12 +118,12 @@ class _IdCardFormScreenState extends State<IdCardFormScreen> {
         await downloadPdf(filePath); // Download the PDF file
 
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('ID Card generated successfully!')),
+          const SnackBar(content: Text('ID Card generated successfully!')),
         );
       } else {
         // Handle error
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error generating ID card')),
+          const SnackBar(content: Text('Error generating ID card')),
         );
       }
     }
@@ -149,17 +149,17 @@ class _IdCardFormScreenState extends State<IdCardFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Generate ID Card'),
+        title: const Text('Generate ID Card'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
           child: ListView(
             children: <Widget>[
               // Name input field
               TextFormField(
-                decoration: InputDecoration(labelText: 'Name'),
+                decoration: const InputDecoration(labelText: 'Name'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a name';
@@ -191,7 +191,7 @@ class _IdCardFormScreenState extends State<IdCardFormScreen> {
 
               // Role input field
               TextFormField(
-                decoration: InputDecoration(labelText: 'Role/Position'),
+                decoration: const InputDecoration(labelText: 'Role/Position'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter role';
@@ -201,25 +201,25 @@ class _IdCardFormScreenState extends State<IdCardFormScreen> {
                 onSaved: (value) => role = value!,
               ),
 
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               // Display selected image or prompt to select
               base64Image == null
-                  ? Text('No image selected.')
+                  ? const Text('No image selected.')
                   : Image.memory(base64Decode(base64Image!), height: 200),
 
               ElevatedButton(
                 onPressed: pickImage,
-                child: Text('Pick Image'),
+                child: const Text('Pick Image'),
               ),
 
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               isLoading
-                  ? Center(child: CircularProgressIndicator()) // Loading indicator
+                  ? const Center(child: CircularProgressIndicator()) // Loading indicator
                   : ElevatedButton(
                 onPressed: submitForm,
-                child: Text('Generate ID Card'),
+                child: const Text('Generate ID Card'),
               ),
             ],
           ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FeatureSelectionScreen extends StatelessWidget {
+  const FeatureSelectionScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,10 +10,10 @@ class FeatureSelectionScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.menu, color: Colors.black),
+          icon: const Icon(Icons.menu, color: Colors.black),
           onPressed: () {},
         ),
-        title: Text(
+        title: const Text(
           '               WatchMan',
           style: TextStyle(color: Colors.black,
 
@@ -32,7 +34,7 @@ class FeatureSelectionScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 8.0,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -40,15 +42,15 @@ class FeatureSelectionScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButton(
-                icon: Icon(Icons.home, size: 30),
+                icon: const Icon(Icons.home, size: 30),
                 onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.analytics, size: 30),
+                icon: const Icon(Icons.analytics, size: 30),
                 onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.settings, size: 30),
+                icon: const Icon(Icons.settings, size: 30),
                 onPressed: () {},
               ),
             ],
@@ -65,7 +67,7 @@ class FeatureSelectionScreen extends StatelessWidget {
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.pink[200], // Updated from 'primary' to 'backgroundColor'
-          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -76,7 +78,7 @@ class FeatureSelectionScreen extends StatelessWidget {
         icon: Icon(icon, color: Colors.black),
         label: Text(
           text,
-          style: TextStyle(fontSize: 16, color: Colors.black),
+          style: const TextStyle(fontSize: 16, color: Colors.black),
         ),
       ),
     );

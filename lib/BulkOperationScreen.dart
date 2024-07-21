@@ -4,6 +4,8 @@ import 'package:http/http.dart' as http;
 import 'package:file_picker/file_picker.dart';
 
 class BulkGenerationScreen extends StatefulWidget {
+  const BulkGenerationScreen({super.key});
+
   @override
   _BulkGenerationScreenState createState() => _BulkGenerationScreenState();
 }
@@ -43,7 +45,7 @@ class _BulkGenerationScreenState extends State<BulkGenerationScreen> {
             content: Text('Bulk generation complete! Download at $zipFilePath')));
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Error generating bulk PDF')));
+            const SnackBar(content: Text('Error generating bulk PDF')));
       }
     }
   }
@@ -52,7 +54,7 @@ class _BulkGenerationScreenState extends State<BulkGenerationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bulk Generation'),
+        title: const Text('Bulk Generation'),
       ),
       body: Center(
         child: Padding(
@@ -62,7 +64,7 @@ class _BulkGenerationScreenState extends State<BulkGenerationScreen> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(16),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
                   blurRadius: 10.0,
@@ -73,7 +75,7 @@ class _BulkGenerationScreenState extends State<BulkGenerationScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 // Title
-                Text(
+                const Text(
                   'Upload CSV for Bulk Generation',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -81,12 +83,12 @@ class _BulkGenerationScreenState extends State<BulkGenerationScreen> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Dropdown to select generation type (Certificate or ID)
                 DropdownButtonFormField<String>(
                   value: generationType,
-                  items: [
+                  items: const [
                     DropdownMenuItem(
                       value: 'certificate',
                       child: Text('Certificate Generation'),
@@ -101,13 +103,13 @@ class _BulkGenerationScreenState extends State<BulkGenerationScreen> {
                       generationType = newValue!;
                     });
                   },
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Select Generation Type',
                     border: OutlineInputBorder(),
                   ),
                 ),
 
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Instructions for CSV file structure
                 Text(
@@ -121,37 +123,37 @@ class _BulkGenerationScreenState extends State<BulkGenerationScreen> {
                   textAlign: TextAlign.center,
                 ),
 
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // CSV Upload button
                 ElevatedButton(
                   onPressed: _pickCsvFile,
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(vertical: 14, horizontal: 60),
+                    padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 60),
                     backgroundColor: Colors.grey[300],
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Upload CSV',
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
 
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Generate button
                 ElevatedButton(
                   onPressed: csvFilePath.isNotEmpty ? _pickCsvFile : null,
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(vertical: 14, horizontal: 60),
+                    padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 60),
                     backgroundColor: csvFilePath.isNotEmpty ? Colors.black : Colors.grey,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Generate',
                     style: TextStyle(color: Colors.white),
                   ),

@@ -5,6 +5,8 @@ import 'dart:convert';
 import 'dart:io'; // For platform detection
 
 class AuthScreen extends StatefulWidget {
+  const AuthScreen({super.key});
+
   @override
   _AuthScreenState createState() => _AuthScreenState();
 }
@@ -75,7 +77,7 @@ class _AuthScreenState extends State<AuthScreen> {
         }
       } catch (error) {
         // Handle network error
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text('Something went wrong!'),
         ));
       } finally {
@@ -105,19 +107,19 @@ class _AuthScreenState extends State<AuthScreen> {
                     height: 100,
                     width: 100,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Title
                   Text(
                     _isSignUpScreen ? 'Create Your WatchMan ID' : 'Login with your Watchman ID',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Name field (only for Sign Up)
                   if (_isSignUpScreen)
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Name'),
+                      decoration: const InputDecoration(labelText: 'Name'),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Please enter your name';
@@ -128,11 +130,11 @@ class _AuthScreenState extends State<AuthScreen> {
                         _name = value!;
                       },
                     ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Email field
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Email'),
+                    decoration: const InputDecoration(labelText: 'Email'),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your email';
@@ -143,11 +145,11 @@ class _AuthScreenState extends State<AuthScreen> {
                       _email = value!;
                     },
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Password field
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Password'),
+                    decoration: const InputDecoration(labelText: 'Password'),
                     obscureText: true,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -159,7 +161,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       _password = value!;
                     },
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Social Media Login Buttons (Using SVG icons)
                   Row(
@@ -203,17 +205,17 @@ class _AuthScreenState extends State<AuthScreen> {
                     ],
                   ),
 
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Submit button
                   _isLoading
-                      ? CircularProgressIndicator()
+                      ? const CircularProgressIndicator()
                       : ElevatedButton(
                     onPressed: _authenticate,
                     child: Text(_isSignUpScreen ? 'Sign Up' : 'Login'),
                   ),
 
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Toggle between Sign Up and Login
                   TextButton(
@@ -224,7 +226,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     },
                     child: Text(
                       _isSignUpScreen ? 'Already have an account? Login' : 'Don’t have an account? Sign Up',
-                      style: TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.black),
                     ),
                   ),
                 ],

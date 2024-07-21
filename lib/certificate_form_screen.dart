@@ -74,7 +74,7 @@ class _CertificateFormScreenState extends State<CertificateFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Generate Certificate'),
+        title: const Text('Generate Certificate'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -84,7 +84,7 @@ class _CertificateFormScreenState extends State<CertificateFormScreen> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(16),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
                   blurRadius: 10.0,
@@ -97,14 +97,14 @@ class _CertificateFormScreenState extends State<CertificateFormScreen> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   // Title
-                  Text(
+                  const Text(
                     'Fill in the details below',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Name field
                   TextFormField(
@@ -126,7 +126,7 @@ class _CertificateFormScreenState extends State<CertificateFormScreen> {
                     onSaved: (value) => name = value!,
                   ),
 
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
 
                   // Date of Birth field (with date picker)
                   TextFormField(
@@ -150,15 +150,15 @@ class _CertificateFormScreenState extends State<CertificateFormScreen> {
                     },
                   ),
 
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Generate button
                   isLoading
-                      ? CircularProgressIndicator()
+                      ? const CircularProgressIndicator()
                       : ElevatedButton(
                     onPressed: _generateCertificate,
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(vertical: 14, horizontal: 60),
+                      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 60),
                       backgroundColor: Colors.black,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
