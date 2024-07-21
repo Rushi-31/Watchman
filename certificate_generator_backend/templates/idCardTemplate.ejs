@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .id-card {
+            border: 2px solid #000;
+            width: 300px;
+            height: 450px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+        p {
+            font-size: 1em;
+            margin: 5px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="id-card">
+        <img src="<%= PHOTO_URL %>" alt="Photo of <%= NAME %>">
+        <h1><%= NAME %></h1>
+        <p>Position: <%= POSITION %></p>
+        <p>DOB: <%= DOB %></p>
+    </div>
+</body>
+</html>

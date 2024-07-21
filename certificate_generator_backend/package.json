@@ -1,0 +1,30 @@
+{
+  "name": "certificate_generator_backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "axios": "^1.7.7",
+    "base64-img": "^1.0.4",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "file-system": "^2.2.2",
+    "fs": "^0.0.1-security",
+    "html-pdf": "^3.0.1",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7",
+    "pdfkit": "^0.15.0",
+    "session": "^0.1.0"
+  }
+}
