@@ -1,5 +1,3 @@
-
-
 # ID Card and Certificate Generator App
 
 This Flutter app allows users to generate ID cards and certificates using simple forms. The app communicates with a backend API to process the data and generate PDF files for download.
@@ -13,23 +11,21 @@ This Flutter app allows users to generate ID cards and certificates using simple
   
 ## Screenshots
 
-### Login Screen
-![Login Screen](ss%20for%20watchmen/login.png)
+### Screens Overview
+<p align="center">
+  <img src="ss%20for%20watchmen/login.png" alt="Login Screen" width="300"/>
+  <img src="ss%20for%20watchmen/signup.png" alt="Signup Screen" width="300"/>
+</p>
 
-### Signup Screen
-![Signup Screen](ss%20for%20watchmen/signup.png)
+<p align="center">
+  <img src="ss%20for%20watchmen/home.png" alt="Home Screen" width="300"/>
+  <img src="ss%20for%20watchmen/id%20generate.png" alt="ID Generation Screen" width="300"/>
+</p>
 
-### Home Screen
-![Home Screen](ss%20for%20watchmen/home.png)
-
-### ID Generation Screen
-![ID Generation Screen](ss%20for%20watchmen/id%20generate.png)
-
-### Certificate Generation Screen
-![Certificate Generation Screen](ss%20for%20watchmen/certificate%20generate.png)
-
-### Bulk Certificate/ID Generation Screen
-![Bulk Certificate/ID Generation Screen](ss%20for%20watchmen/bulk.png)
+<p align="center">
+  <img src="ss%20for%20watchmen/certificate%20generate.png" alt="Certificate Generation Screen" width="300"/>
+  <img src="ss%20for%20watchmen/bulk.png" alt="Bulk Certificate/ID Generation Screen" width="300"/>
+</p>
 
 ## How to Run the App
 
